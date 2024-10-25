@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forca Angola</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Forca Angola</h1>
+        <div class="score">Pontuação: <span id="score">0</span></div>
+        
+        <div class="hangman-box">
+            <svg class="hangman" id="hangman" viewBox="0 0 200 250">
+                <!-- Base -->
+                <line x1="40" y1="230" x2="160" y2="230" stroke="white" stroke-width="4"/>
+                <!-- Pole -->
+                <line x1="100" y1="230" x2="100" y2="30" stroke="white" stroke-width="4"/>
+                <!-- Top -->
+                <line x1="100" y1="30" x2="160" y2="30" stroke="white" stroke-width="4"/>
+                <!-- Rope -->
+                <line x1="160" y1="30" x2="160" y2="60" stroke="white" stroke-width="4"/>
+                <!-- Head -->
+                <circle id="head" cx="160" cy="80" r="20" stroke="white" stroke-width="4" fill="none" style="display: none;"/>
+                <!-- Body -->
+                <line id="body" x1="160" y1="100" x2="160" y2="150" stroke="white" stroke-width="4" style="display: none;"/>
+                <!-- Left Arm -->
+                <line id="leftArm" x1="160" y1="120" x2="130" y2="140" stroke="white" stroke-width="4" style="display: none;"/>
+                <!-- Right Arm -->
+                <line id="rightArm" x1="160" y1="120" x2="190" y2="140" stroke="white" stroke-width="4" style="display: none;"/>
+                <!-- Left Leg -->
+                <line id="leftLeg" x1="160" y1="150" x2="130" y2="180" stroke="white" stroke-width="4" style="display: none;"/>
+                <!-- Right Leg -->
+                <line id="rightLeg" x1="160" y1="150" x2="190" y2="180" stroke="white" stroke-width="4" style="display: none;"/>
+            </svg>
+        </div>
+
+        <div class="word-display" id="wordDisplay"></div>
+        <div class="hint" id="hint"></div>
+        <div class="game-info" id="gameInfo">Tentativas restantes: <span id="attempts">6</span></div>
+        
+        <div class="keyboard" id="keyboard"></div>
+        
+        <button class="new-game-btn" id="newGameBtn">Novo Jogo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
